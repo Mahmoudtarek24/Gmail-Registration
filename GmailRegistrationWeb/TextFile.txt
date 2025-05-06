@@ -1,0 +1,50 @@
+﻿The goal is to create a Gmail-like registration system with the following steps:
+
+Step 1: Enter First Name and Last Name
+Step 2: Enter Date of Birth and Gender
+Step 3: Choose a Gmail Address
+Step 4: Create a Strong Password
+Step 5: Verify Phone Number
+Step 6: Enter Verification Code
+Step 7: Add Recovery Email (Optional)
+Step 8: Review Account Information
+Step 9: Accept Privacy and Terms
+Step 10: Create an Account and Show the Dashboard
+
+
+Step1: Enter First Name and Last Name
+In the first step, the users will be asked to provide their first and last names.
+Both fields are required and designed to validate user input to ensure no special characters
+or numbers are included. After the user enters this information and clicks the “Next” button, 
+the application validates the input and progresses to the next step.
+-----------
+Step 1: ViewModel for the First and Last Name
+-------------------------------------------------------------------------------------
+
+
+Step2: Enter Date of Birth and Gender
+
+
+--------------------------------------------------------------------------------------------------------
+Choose Gmail Address View Model
+-----------------------------------------------------------------------------------------------------------
+
+Step 4: Create Password View Model
+
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+
+ViewModel for Step 6: Enter Verification Code.
+--------------------------------------------------------------------------------------------------------------------
+Step7: Add Recovery Email (Optional)
+------------------------------------------------------------------------------------------------------------------------
+Step 8: Review Account Info View Model
+---------------------------------------------------------------------------------------------------------------------------
+Step 9: Privacy and Terms View Model
+-------------------------------------------------
+add dbcontext
+----------------------------------------------
+add remove validation controll
+----------------------------------------------------
+add Registration Controller
+

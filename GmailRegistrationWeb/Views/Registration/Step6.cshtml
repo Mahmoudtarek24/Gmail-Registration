@@ -1,0 +1,33 @@
+﻿@inject IHttpContextAccessor HttpContextAccessor;
+@model RegisterStep6ViewModel
+@{
+	ViewData["Title"] = "Step 6: Enter Verification Code";
+	ViewBag.CurrentStep = 6;
+	var code = HttpContextAccessor.HttpContext.Request.Cookies["VerificationCode"];
+}
+<div class="card shadow-sm">
+	<div class="card-body">
+		<p>Enter the 5-digit verification code sent to your phone.</p>
+		<h3 class="text-center text-primary">Code :  @code  </h3>
+		<form asp-action="Step6" asp-controller="Registration" method="post">
+			<div class="form-group">
+				<label asp-for="VerificationCode"></label>
+				<input asp-for="VerificationCode" maxlength="5"   class="form-control" placeholder="Enter verification code" />
+				<span asp-validation-for="VerificationCode" class="text-danger"></span>
+			</div>
+			<!-- Back and Next Buttons -->
+			<div class="form-group mt-3 text-end">
+				<a asp-action="Step5" asp-controller="Registration" class="btn btn-secondary">Back</a>
+				<button type="submit" class="btn btn-primary">Verify</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />}
+
+
+
+

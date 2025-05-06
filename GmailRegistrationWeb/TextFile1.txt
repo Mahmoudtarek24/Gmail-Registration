@@ -1,0 +1,21 @@
+﻿
+public DbSet<Users> users { get; set; }  when make it readonly or private will not privent crud operation and retrive
+data ,it only prevent to assign value outside dbslass 
+
+//create array for day and month
+//view email how it work
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

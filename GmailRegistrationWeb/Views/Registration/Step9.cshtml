@@ -1,0 +1,44 @@
+﻿@model RegisterStep9ViewModel
+@{
+	ViewData["Title"] = "Step 9: Privacy and Terms";
+	ViewBag.CurrentStep = 9;
+}
+<h1 class="mb-4 text-center"> @ViewData["Title"] </h1>
+
+<div class="card shadow-sm">
+	<div class="card-body">
+		<div class="privacy-terms">
+			<p>To create a Google Account, you’ll need to agree to the Terms of Service below.</p>
+			<p>You agree not to misuse or exploit the Service.</p>
+			<p>You agree not to post or share illegal, harmful, or inappropriate content.</p>
+			<p>You are responsible for maintaining the confidentiality of your account.</p>
+		</div>
+
+		<form asp-action="Step9" asp-controller="Registration" method="post">
+			<div class="form-group form-check">
+				<input asp-for="Agree" id="agreeCheckbox" class="form-check-input" type="checkbox" />
+				<label asp-for="Agree" class="form-check-label"></label>
+				<span asp-validation-for="Agree" class="text-danger"></span>
+			</div>
+			<div class="form-group mt-3 text-end">
+				<button class="btn btn-primary" id="agreeButton" type="submit" disabled>I Agree</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+@section Scripts{
+	<partial name="_ValidationScriptsPartial">
+		<script>
+			$(document).ready(function(){
+				$('#agreeCheckbox').change(function(){
+					if ($(this).is(':checked')){
+						$('#agreeButton').prop('disabled', false)
+					}else{
+						$('#agreeButton').prop('disabled', true)
+					}
+				})
+			})
+		</script>
+	}
